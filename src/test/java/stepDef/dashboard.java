@@ -22,7 +22,6 @@ import static config.env.getPassword;
 public class dashboard {
     dashboardpage elementdashboard = new dashboardpage();
     loginpage elementLogin = new loginpage();
-
     @Given("User on the saucedemo login page")
     public void saucedemo_login_page() {
         WebDriverManager.chromedriver().setup();
@@ -33,7 +32,6 @@ public class dashboard {
         driver.get(BaseURL);
         String title = driver.findElement(By.xpath("//div[@class='login_logo']")).getText(); //get element title header
         Assert.assertEquals(title, "Swag Labs"); //assert the title header website
-        //driver.close();
     }
     @When("User input valid credentials")
     public void input_valid_email(){

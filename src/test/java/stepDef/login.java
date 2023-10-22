@@ -42,8 +42,6 @@ public class login {
     public void directed_dashboard_page(){
         String titleDashboard = driver.findElement(By.xpath("//div[@class='footer_copy']")).getText();
         Assert.assertEquals(titleDashboard, "© 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy");
-
-        //driver.findElement(By.xpath("(//div[@class='css-0'])[1]")).click();
     }
     @And("User input invalid password")
     public void input_invalid_password(){

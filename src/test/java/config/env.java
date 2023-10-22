@@ -1,7 +1,6 @@
 package config;
 
 import org.openqa.selenium.WebDriver;
-
 public class env {
     public static WebDriver driver; //init webdriver
     public static String BaseURL = "https://www.saucedemo.com/"; //init base url
