@@ -10,7 +10,6 @@ public class checkoutpage {
     By poscode = By.id("postal-code");
     By title = By.xpath("//span[@class='title']");
 
-
     public By getCancel(){
         return cancel;
     }

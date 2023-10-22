@@ -30,7 +30,6 @@ public class addcart {
         driver.get(BaseURL);
         String title = driver.findElement(By.xpath("//div[@class='login_logo']")).getText(); //get element title header
         Assert.assertEquals(title, "Swag Labs"); //assert the title header website
-        //driver.close();
     }
     @When("User input credential")
     public void input_credential(){

@@ -1,7 +1,6 @@
 package objectselector;
 
 import org.openqa.selenium.By;
-
 public class addcartpage {
     By addcart = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]");
     By checkout = By.id("checkout");

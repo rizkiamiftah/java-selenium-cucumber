@@ -1,9 +1,7 @@
 package objectselector;
 
 import org.openqa.selenium.By;
-
 public class dashboardpage {
-
     By sidebar = By.id("react-burger-menu-btn");
     By logout = By.xpath("//a[@id='logout_sidebar_link']");
     By cart = By.xpath("//a[@class='shopping_cart_link']");
@@ -30,5 +28,4 @@ public class dashboardpage {
     public By getTitleproduct(){
         return titleproduct;
     }
-
 }

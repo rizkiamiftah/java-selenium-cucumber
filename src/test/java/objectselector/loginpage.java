@@ -1,7 +1,6 @@
 package objectselector;
 
 import org.openqa.selenium.By;
-
 public class loginpage {
     By fieldEmail = By.id("user-name");
     By fieldPassword = By.id("password");

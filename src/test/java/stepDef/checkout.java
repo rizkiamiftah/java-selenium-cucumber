@@ -103,13 +103,11 @@ public class checkout {
     @When("User click cancel")
     public void click_cancel(){
         driver.findElement(elementcheckout.getCancel()).click();
-
     }
     @Then("User directed back to detail cart")
     public void back_detail_cart(){
         String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Your Cart"); //assert the title header website
-
     }
     @When("User input the form")
     public void input_form(){
@@ -120,12 +118,10 @@ public class checkout {
     @And("User click continue")
     public void click_continue(){
         driver.findElement(elementcheckout.getLanjut()).click();
-
     }
     @Then("User directed to overview page")
     public void directed_overview_page(){
         String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Checkout: Overview"); //assert the title header website
-
     }
 }
