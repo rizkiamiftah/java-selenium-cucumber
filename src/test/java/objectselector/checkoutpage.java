@@ -8,6 +8,7 @@ public class checkoutpage {
     By firstname = By.id("first-name");
     By lastname = By.id("last-name");
     By poscode = By.id("postal-code");
+    By title = By.xpath("//span[@class='title']");
 
 
     public By getCancel(){
@@ -19,4 +20,5 @@ public class checkoutpage {
     public By getFirstname(){ return firstname;}
     public By getLastname(){ return lastname;}
     public By getPoscode(){return poscode;}
+    public By getTitle(){return title;}
 }

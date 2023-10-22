@@ -51,7 +51,7 @@ public class login {
     }
     @Then("Display invalid credential alert")
     public void display_invalid_credential_alert(){
-        String alertMessage = driver.findElement((By.xpath("//div[@class='error-message-container error']"))).getText();
+        String alertMessage = driver.findElement(elementLogin.alert()).getText();
         Assert.assertEquals(alertMessage,"Epic sadface: Username and password do not match any user in this service");
     }
     @And("User input invalid email")
@@ -60,7 +60,7 @@ public class login {
     }
     @Then("Display invalid email alert")
     public void display_invalid_email_alert(){
-        String alertMessage = driver.findElement((By.xpath("//div[@class='error-message-container error']"))).getText();
+        String alertMessage = driver.findElement(elementLogin.alert()).getText();
         Assert.assertEquals(alertMessage,"Epic sadface: Username and password do not match any user in this service");
     }
     @And("User input blank email")
@@ -69,7 +69,7 @@ public class login {
     }
     @Then("Display error blank email alert")
     public void display_error_blank_email_alert(){
-        String alertMessage = driver.findElement((By.xpath("//div[@class='error-message-container error']"))).getText();
+        String alertMessage = driver.findElement(elementLogin.alert()).getText();
         Assert.assertEquals(alertMessage,"Epic sadface: Username is required");
     }
     @And("User input blank password")
@@ -78,7 +78,7 @@ public class login {
     }
     @Then("Display error blank password alert")
     public void display_error_blank_password_alert(){
-        String alertMessage = driver.findElement((By.xpath("//div[@class='error-message-container error']"))).getText();
+        String alertMessage = driver.findElement(elementLogin.alert()).getText();
         Assert.assertEquals(alertMessage,"Epic sadface: Password is required");
     }
 }

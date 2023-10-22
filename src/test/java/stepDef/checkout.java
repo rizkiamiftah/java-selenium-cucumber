@@ -51,7 +51,7 @@ public class checkout {
     }
     @Given("User is on dashboard")
     public void user_is_on_dashboard(){
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Products"); //assert the title header website
     }
     @When("User tap cart button")
@@ -69,35 +69,35 @@ public class checkout {
     }
     @Then("User direct to detail cart")
     public void direc_to_detail_cart(){
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Your Cart"); //assert the title header website
     }
     @Given("User on detailed cart")
     public void detailed_cart(){
         driver.findElement(elementcart.getLinkcart()).click();
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Your Cart"); //assert the title header website
     }
     @When("User tap checkout")
     public void tap_checkout(){
         driver.findElement(elementcart.getLinkcart()).click();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Your Cart"); //assert the title header website
         driver.findElement(elementcart.getCheckout()).click();
     }
     @Then("User direct to checkout page")
     public void direct_to_checkout_page(){
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Checkout: Your Information"); //assert the title header website
     }
     @Given("User on checkout page")
     public void checkout_page(){
         driver.findElement(elementcart.getLinkcart()).click();
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Your Cart"); //assert the title header website
         driver.findElement(elementcart.getCheckout()).click();
-        String titlepage = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String titlepage = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(titlepage, "Checkout: Your Information"); //assert the title header website
     }
     @When("User click cancel")
@@ -107,7 +107,7 @@ public class checkout {
     }
     @Then("User directed back to detail cart")
     public void back_detail_cart(){
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Your Cart"); //assert the title header website
 
     }
@@ -124,7 +124,7 @@ public class checkout {
     }
     @Then("User directed to overview page")
     public void directed_overview_page(){
-        String title = driver.findElement(By.xpath("//span[@class='title']")).getText(); //get element title header
+        String title = driver.findElement(elementcheckout.getTitle()).getText(); //get element title header
         Assert.assertEquals(title, "Checkout: Overview"); //assert the title header website
 
     }
